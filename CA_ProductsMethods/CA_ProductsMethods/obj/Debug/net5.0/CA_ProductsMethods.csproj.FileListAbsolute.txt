@@ -1,0 +1,16 @@
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\bin\Debug\net5.0\CA_ProductsMethods.exe
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\bin\Debug\net5.0\CA_ProductsMethods.deps.json
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\bin\Debug\net5.0\CA_ProductsMethods.runtimeconfig.json
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\bin\Debug\net5.0\CA_ProductsMethods.runtimeconfig.dev.json
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\bin\Debug\net5.0\CA_ProductsMethods.dll
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\bin\Debug\net5.0\CA_ProductsMethods.pdb
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\obj\Debug\net5.0\CA_ProductsMethods.csproj.AssemblyReference.cache
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\obj\Debug\net5.0\CA_ProductsMethods.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\obj\Debug\net5.0\CA_ProductsMethods.AssemblyInfoInputs.cache
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\obj\Debug\net5.0\CA_ProductsMethods.AssemblyInfo.cs
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\obj\Debug\net5.0\CA_ProductsMethods.csproj.CoreCompileInputs.cache
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\obj\Debug\net5.0\CA_ProductsMethods.dll
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\obj\Debug\net5.0\refint\CA_ProductsMethods.dll
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\obj\Debug\net5.0\CA_ProductsMethods.pdb
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\obj\Debug\net5.0\CA_ProductsMethods.genruntimeconfig.cache
+C:\Users\salli\OneDrive\Masaüstü\C#\CA_ProductsMethods\CA_ProductsMethods\obj\Debug\net5.0\ref\CA_ProductsMethods.dll
