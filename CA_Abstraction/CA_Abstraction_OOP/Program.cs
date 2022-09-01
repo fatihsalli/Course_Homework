@@ -22,37 +22,40 @@ namespace CA_Abstraction_OOP
             List<Instrument> instruments = new List<Instrument>();
 
             Instrument instrument1=new Instrument();
-            instrument1.InstrumentName = "Bağlama";
+            instrument1.Mark = "A Markası";
+            instrument1.Model = "A Modeli";
+            instrument1.Name = "Bağlama";
+
             instruments.Add(instrument1);
 
             Instrument instrument2 = new Instrument();
-            instrument2.InstrumentName = "Elektro Gitar";
+            instrument2.Name = "Elektro Gitar";
             instruments.Add(instrument2);
 
             Instrument instrument3 = new Instrument();
-            instrument3.InstrumentName = "Bateri";
+            instrument3.Name = "Bateri";
             instruments.Add(instrument3);
 
             Instrument instrument4 = new Instrument();
-            instrument4.InstrumentName = "Bas Gitar";
+            instrument4.Name = "Bas Gitar";
             instruments.Add(instrument4);
 
             Instrument instrument5 = new Instrument();
-            instrument5.InstrumentName = "Ney";
+            instrument5.Name = "Ney";
             instruments.Add(instrument5);
 
             Instrument instrument6 = new Instrument();
-            instrument6.InstrumentName = "Tulum";
+            instrument6.Name = "Tulum";
             instruments.Add(instrument6);
 
             Instrument instrument7 = new Instrument();
-            instrument7.InstrumentName = "Piyano";
+            instrument7.Name = "Piyano";
             instruments.Add(instrument7);
 
             Console.WriteLine("*****************");
             foreach (Instrument item in instruments)
             {
-                Console.WriteLine(item.InstrumentName);
+                Console.WriteLine(item.Name);
             }
             Console.WriteLine("*****************");
 
@@ -96,7 +99,7 @@ namespace CA_Abstraction_OOP
             Console.WriteLine("*****************");
             foreach (Musician item in musicians)
             {
-                Console.WriteLine(item.Firstname+" "+item.Instrument.InstrumentName);
+                Console.WriteLine(item.Firstname+" "+item.Instrument.Name);
             }
             Console.WriteLine("*****************");
 

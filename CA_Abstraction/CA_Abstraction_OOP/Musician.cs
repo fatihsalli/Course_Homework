@@ -9,6 +9,8 @@ namespace CA_Abstraction_OOP
     public class Musician
     {
         public string Firstname { get; set; }
+        public string Lastname { get; set; }
+
         public Instrument Instrument { get; set; }
 
     }
