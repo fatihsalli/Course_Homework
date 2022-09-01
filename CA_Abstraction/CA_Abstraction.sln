@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_Tekrar", "CA_Abstraction\CA_Tekrar.csproj", "{48DDA611-DA66-4541-A178-F8197550B900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_Abstraction_OOP", "CA_Abstraction_OOP\CA_Abstraction_OOP.csproj", "{0C2A28A0-58C2-4A79-8CC3-EB405D023F5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48DDA611-DA66-4541-A178-F8197550B900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48DDA611-DA66-4541-A178-F8197550B900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48DDA611-DA66-4541-A178-F8197550B900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48DDA611-DA66-4541-A178-F8197550B900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C2A28A0-58C2-4A79-8CC3-EB405D023F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C2A28A0-58C2-4A79-8CC3-EB405D023F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C2A28A0-58C2-4A79-8CC3-EB405D023F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C2A28A0-58C2-4A79-8CC3-EB405D023F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEDAD266-33F2-4853-BF44-2EBCEA9CDB6B}
+	EndGlobalSection
+EndGlobal

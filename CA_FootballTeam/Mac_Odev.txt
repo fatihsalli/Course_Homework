@@ -1,0 +1,20 @@
+//Futbol takımı
+
+
+takimListesi
+
+	//id
+	//ad
+	//soyad
+	//mevki
+	//forma numarası
+	//kullandığı ayak
+	
+
+	//Eylemler
+		//Şut çek (int sutGucu)
+		//Press Yap -
+		//Kurtar - Oyuncu topa müdahale etti
+		//Çalım at - Oyuncu çalım attı
+
+//futbolcunun şut gücü 70'den yüksek ise isabet oranı düşsün.

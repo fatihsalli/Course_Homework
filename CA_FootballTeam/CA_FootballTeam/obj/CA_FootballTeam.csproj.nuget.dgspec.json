@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\salli\\OneDrive\\Masaüstü\\ODEV\\CA_FootballTeam\\CA_FootballTeam\\CA_FootballTeam.csproj": {}
+    "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_FootballTeam\\CA_FootballTeam\\CA_FootballTeam.csproj": {}
   },
   "projects": {
-    "C:\\Users\\salli\\OneDrive\\Masaüstü\\ODEV\\CA_FootballTeam\\CA_FootballTeam\\CA_FootballTeam.csproj": {
+    "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_FootballTeam\\CA_FootballTeam\\CA_FootballTeam.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salli\\OneDrive\\Masaüstü\\ODEV\\CA_FootballTeam\\CA_FootballTeam\\CA_FootballTeam.csproj",
+        "projectUniqueName": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_FootballTeam\\CA_FootballTeam\\CA_FootballTeam.csproj",
         "projectName": "CA_FootballTeam",
-        "projectPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\ODEV\\CA_FootballTeam\\CA_FootballTeam\\CA_FootballTeam.csproj",
+        "projectPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_FootballTeam\\CA_FootballTeam\\CA_FootballTeam.csproj",
         "packagesPath": "C:\\Users\\salli\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\ODEV\\CA_FootballTeam\\CA_FootballTeam\\obj\\",
         "projectStyle": "PackageReference",
