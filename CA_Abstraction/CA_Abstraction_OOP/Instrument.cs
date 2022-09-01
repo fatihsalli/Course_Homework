@@ -8,6 +8,7 @@ namespace CA_Abstraction_OOP
 {
     public class Instrument:Musician
     {
+
         public string InstrumentName { get; set; }
 
         public static string Play(string _ınstrument)
