@@ -1,0 +1,16 @@
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\bin\Debug\net5.0\CA_FootballTeam_OOP.exe
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\bin\Debug\net5.0\CA_FootballTeam_OOP.deps.json
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\bin\Debug\net5.0\CA_FootballTeam_OOP.runtimeconfig.json
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\bin\Debug\net5.0\CA_FootballTeam_OOP.runtimeconfig.dev.json
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\bin\Debug\net5.0\CA_FootballTeam_OOP.dll
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\bin\Debug\net5.0\CA_FootballTeam_OOP.pdb
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\obj\Debug\net5.0\CA_FootballTeam_OOP.csproj.AssemblyReference.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\obj\Debug\net5.0\CA_FootballTeam_OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\obj\Debug\net5.0\CA_FootballTeam_OOP.AssemblyInfoInputs.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\obj\Debug\net5.0\CA_FootballTeam_OOP.AssemblyInfo.cs
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\obj\Debug\net5.0\CA_FootballTeam_OOP.csproj.CoreCompileInputs.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\obj\Debug\net5.0\CA_FootballTeam_OOP.dll
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\obj\Debug\net5.0\refint\CA_FootballTeam_OOP.dll
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\obj\Debug\net5.0\CA_FootballTeam_OOP.pdb
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\obj\Debug\net5.0\CA_FootballTeam_OOP.genruntimeconfig.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_FootballTeam\CA_FootballTeam_OOP\obj\Debug\net5.0\ref\CA_FootballTeam_OOP.dll
