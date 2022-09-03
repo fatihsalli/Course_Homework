@@ -178,7 +178,136 @@ namespace CA_FootballTeam_OOP
         }
 
 
+        /// <summary>
+        /// Oyun oynama kısmı, dışarıdan Player Classını alır.
+        /// </summary>
+        /// <param name="teamPlay"></param>
+        public override void PlayGame(Player teamPlay)
+        {
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Seçenekler: \n1.Şut çekmek için - (1)\n2.Press yapmak için - (2)\n3.Topu kurtarmak için - (3)\n4.Çalım atmak için - (4)\n5.Oyuncu değiştirmek için (5)\n6.Ana menü için (6)");
+                    int selected = int.Parse(Console.ReadLine());
 
+                    if (selected == 1)
+                    {
+                        int teamScore = (teamPlay.ShotPower + teamPlay.HitRating) / 2;
+                        int otherTeamScore = RandomTeam().GoalkeepingPower;
+
+                        if (teamScore > otherTeamScore)
+                        {
+                            Console.WriteLine("***************************");
+                            Console.WriteLine($"Goooooooool!\nSizin gücünüz:{teamScore}-Rakip gücü:{otherTeamScore}");
+                            Console.WriteLine("***************************");
+                        }
+                        else
+                        {
+                            Console.WriteLine("***************************");
+                            Console.WriteLine($"Kaleci topu kurtardı!\nSizin gücünüz:{teamScore}-Rakip gücü:{otherTeamScore}");
+                            Console.WriteLine("***************************");
+                        }
+                    }
+                    else if (selected == 2)
+                    {
+                        int teamScore = teamPlay.PressPower;
+                        int otherTeamScore = RandomTeam().DriplingPower;
+
+                        if (teamScore > otherTeamScore)
+                        {
+                            Console.WriteLine("***************************");
+                            Console.WriteLine($"Topu kazandınız!\nSizin gücünüz:{teamScore}-Rakip gücü:{otherTeamScore}");
+                            Console.WriteLine("***************************");
+
+                        }
+                        else
+                        {
+                            Console.WriteLine("***************************");
+                            Console.WriteLine($"Topu kazanamadınız!\nSizin gücünüz:{teamScore}-Rakip gücü:{otherTeamScore}");
+                            Console.WriteLine("***************************");
+                        }
+                    }
+                    else if (selected == 3)
+                    {
+                        int teamScore = teamPlay.GoalkeepingPower;
+                        int otherTeamScore = (RandomTeam().ShotPower + RandomTeam().HitRating) / 2;
+
+                        if (teamScore > otherTeamScore)
+                        {
+                            Console.WriteLine("***************************");
+                            Console.WriteLine($"Şutu çıkardınız!\nSizin gücünüz:{teamScore}-Rakip gücü:{otherTeamScore}");
+                            Console.WriteLine("***************************");
+                        }
+                        else
+                        {
+                            Console.WriteLine("***************************");
+                            Console.WriteLine($"Malesef gol yediniz!\nSizin gücünüz:{teamScore}-Rakip gücü:{otherTeamScore}");
+                            Console.WriteLine("***************************");
+                        }
+                    }
+                    else if (selected == 4)
+                    {
+                        int teamScore = teamPlay.DriplingPower;
+                        int otherTeamScore = RandomTeam().PressPower;
+
+                        if (teamScore > otherTeamScore)
+                        {
+                            Console.WriteLine("***************************");
+                            Console.WriteLine($"Çalım attınız!\nSizin gücünüz:{teamScore}-Rakip gücü:{otherTeamScore}");
+                            Console.WriteLine("***************************");
+                        }
+                        else
+                        {
+                            Console.WriteLine("***************************");
+                            Console.WriteLine($"Çalım atamadınız topu kaptırdınız!\nSizin gücünüz:{teamScore}-Rakip gücü:{otherTeamScore}");
+                            Console.WriteLine("***************************");
+                        }
+                    }
+                    else if (selected == 5)
+                    {
+                        Console.WriteLine("Oyuncu Listesi");
+                        GetList();
+                        Console.WriteLine("Yeni oyuncu Id seçiniz.");
+                        int selectedPlayId = int.Parse(Console.ReadLine());
+
+                        teamPlay = GetById(selectedPlayId);
+
+                        Console.WriteLine($"{teamPlay.Name} isimli oyuncuyu seçtiniz.");
+
+                    }
+                    else if (selected == 6)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Hatalı bir değer girdiniz!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Random team karşı rakip oluştumak için kullanılmaktadır. Değer almaz Player Classı dışarıya verir.
+        /// </summary>
+        /// <returns></returns>
+        public override Player RandomTeam()
+        {
+            Player teamRandom = new Player();
+            Random randomTeam = new Random();
+
+            teamRandom.GoalkeepingPower = randomTeam.Next(60, 100);
+            teamRandom.DriplingPower = randomTeam.Next(60, 100);
+            teamRandom.ShotPower = randomTeam.Next(60, 100);
+            teamRandom.HitRating = randomTeam.Next(60, 100);
+            teamRandom.PressPower = randomTeam.Next(60, 100);
+            return teamRandom;
+        }
 
 
 

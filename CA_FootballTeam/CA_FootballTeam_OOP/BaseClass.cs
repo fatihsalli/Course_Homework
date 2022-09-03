@@ -14,5 +14,10 @@ namespace CA_FootballTeam_OOP
         public abstract void AddJerseyNumber();
         public abstract Player GetById(int id);
         public abstract string Update(Player model);
+        public abstract void PlayGame(Player teamPlay);
+        public abstract Player RandomTeam();
+
+
+
     }
 }

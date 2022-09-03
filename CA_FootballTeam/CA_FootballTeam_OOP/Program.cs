@@ -35,14 +35,12 @@ namespace CA_FootballTeam_OOP
                             action.AddJerseyNumber();
                             break;
                         case 5:
-
-
-
-
+                            Console.WriteLine("Oynamak istediğiniz oyuncunun Id'sini girin.");
+                            int playId = int.Parse(Console.ReadLine());
+                            action.PlayGame(action.GetById(playId));
                             break;
                         case 6:
                             return;
-
 
                     }
                 }
