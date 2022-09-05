@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_McAdam\\CA_McAdam\\CA_McAdam.csproj": {}
+    "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_McAdam\\CA_McAdam_OOP\\CA_McAdam_OOP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_McAdam\\CA_McAdam\\CA_McAdam.csproj": {
+    "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_McAdam\\CA_McAdam_OOP\\CA_McAdam_OOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_McAdam\\CA_McAdam\\CA_McAdam.csproj",
-        "projectName": "CA_McAdam",
-        "projectPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_McAdam\\CA_McAdam\\CA_McAdam.csproj",
+        "projectUniqueName": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_McAdam\\CA_McAdam_OOP\\CA_McAdam_OOP.csproj",
+        "projectName": "CA_McAdam_OOP",
+        "projectPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_McAdam\\CA_McAdam_OOP\\CA_McAdam_OOP.csproj",
         "packagesPath": "C:\\Users\\salli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_McAdam\\CA_McAdam\\obj\\",
+        "outputPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_McAdam\\CA_McAdam_OOP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
