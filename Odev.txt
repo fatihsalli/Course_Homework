@@ -1,8 +1,0 @@
-//northwind veritabanı yansımasını (ORM) projeye dahil edin.
-
-//ürün ekleyin.
-//ürün listeleyin.
-//ürün güncelleyin.
-//ürünü silin.
-
-Kullanıcı dan alacak bilgilerle
