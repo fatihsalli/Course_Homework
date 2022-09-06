@@ -76,6 +76,8 @@ namespace CA_McAdam_OOP
             model.ProductName = Console.ReadLine();
             Console.WriteLine("Lütfen menü fiyatını giriniz.");
             model.UnitPrice = int.Parse(Console.ReadLine());
+            Console.WriteLine("Lütfen adet giriniz.");
+            model.Count = int.Parse(Console.ReadLine());
             Console.WriteLine($"Menü boyutunu seçiniz. {Size.Small}-(1)  {Size.Medium}-(2)  {Size.Large}-(3)");
             int secim = Convert.ToInt32(Console.ReadLine());
             model.CreatedDate=DateTime.Now;

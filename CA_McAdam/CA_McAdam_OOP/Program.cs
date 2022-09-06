@@ -16,7 +16,7 @@ namespace CA_McAdam_OOP
             {
                 try
                 {
-                    Console.WriteLine($"Yeni sipariş oluşturmak için [1]\nSipariş listelemek için [2]\nSipariş güncellemek için [3]\nSipariş silmek için [4]\nRaporlama için [5]\nÇıkış için [6]");
+                    Console.WriteLine($"Yeni sipariş oluşturmak için [1]\nSipariş listelemek için [2]\nSipariş güncellemek için [3]\nSipariş silmek için [4]\nRaporlama için [5]\nSql veritabanına aktarmak için [6]\nÇıkış için [7]");
                     int selected = int.Parse(Console.ReadLine());
 
                     switch (selected)
@@ -60,6 +60,10 @@ namespace CA_McAdam_OOP
                             Console.WriteLine(report.ExtraOrderIncome());
                             break;
                         case 6:
+                            OrderDB orderDB = new OrderDB();
+                            Console.WriteLine(orderDB.SqlImport());
+                            break;
+                        case 7:
                             sayac++;
                             break;
                     }
