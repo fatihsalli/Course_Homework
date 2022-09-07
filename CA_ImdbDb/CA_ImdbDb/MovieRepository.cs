@@ -89,7 +89,6 @@ namespace CA_ImdbDb
                 Console.WriteLine($"Id:{m.Id} Film adı:{m.Title} Yıl:{m.Year} Puan:{m.Rating}");
             }
             return $"{dizi2.Count} adet film listelenmiştir.";
-
         }
 
         public string RandomMovie()
@@ -131,7 +130,46 @@ namespace CA_ImdbDb
             return $"Id:{result2.Id} Film adı:{result2.Title} Yıl:{result2.Year} Puan:{result2.Rating}";
         }
 
+        public string GetByGenreM()
+        {
+            List<int> dizi = new List<int>();
+            List<int> dizi2 = new List<int>();
+            List<int> dizi3 = new List<int>();
+            Movie m = null;
 
+            Console.WriteLine("Hangi tür filmler istiyorsanız sırasıyla yazınız.");
+            string selected = Console.ReadLine();
+            string selected2 = Console.ReadLine();
+
+            Genre result = db.Genres.FirstOrDefault(x => x.Name.Contains(selected));
+            Genre result2 = db.Genres.FirstOrDefault(x => x.Name.Contains(selected2));
+
+            dizi.Add(result.Id);
+            dizi.Add(result2.Id);
+
+            foreach (var item in db.MovieGenres.ToList())
+            {
+                if (item.GenreId == dizi[0])
+                {
+                    dizi2.Add(item.MovieId);
+                }
+                else if (item.GenreId == dizi[1])
+                {
+                    dizi3.Add(item.MovieId);
+                }
+            }
+
+            foreach (int i in dizi2)
+            {
+                if (dizi3.Contains(i))
+                {
+                    m = db.Movies.FirstOrDefault(x => x.Id == i);
+                    Console.WriteLine($"Id:{m.Id} Film adı:{m.Title} Yıl:{m.Year} Puan:{m.Rating}");
+                }
+                
+            }
+            return "";
+        }
 
 
     }
