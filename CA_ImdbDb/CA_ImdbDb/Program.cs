@@ -50,9 +50,10 @@ namespace CA_ImdbDb
                         case SelectedItem.GetByGenre:
                             break;
                         case SelectedItem.RandomMovie:
-
+                            Console.WriteLine(movieRepository.RandomMovie());
                             break;
                         case SelectedItem.RandomGetByRating:
+                            Console.WriteLine(movieRepository.RandomGetByRating());
                             break;
                         default:
                             sayac++;

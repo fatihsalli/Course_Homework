@@ -65,9 +65,44 @@ namespace CA_ImdbDb
             return $"";
         }
 
+        public string RandomMovie()
+        {
+            List<int> dizi = new List<int>();
+            Random random = new Random();
 
+            foreach (Movie m in db.Movies.ToList())
+            {
+                dizi.Add(m.Id);
+            }
+            int randomNumber = dizi[random.Next(0, dizi.Count)];
 
+            var result = db.Movies.FirstOrDefault(x => x.Id==randomNumber);
 
+            return $"Id:{result.Id} Film adı:{result.Title} Yıl:{result.Year} Puan:{result.Rating}";
+        }
+
+        public string RandomGetByRating()
+        {
+            List<int> dizi=new List<int>();
+            Random random = new Random();
+
+            Console.WriteLine("Puan aralığına göre rastgele film için puan aralıklarını sırasıyla entera basarak giriniz.");
+            double selected1 = double.Parse(Console.ReadLine());
+            double selected2 = double.Parse(Console.ReadLine());
+
+            var result = db.Movies.Where(x => x.Rating > selected1 && x.Rating < selected2).ToList();
+
+            foreach (Movie movie in result)
+            {
+                dizi.Add(movie.Id);
+            }
+
+            int randomNumber = dizi[random.Next(0,dizi.Count)];
+
+            var result2 = db.Movies.FirstOrDefault(x => x.Id == randomNumber);
+
+            return $"Id:{result2.Id} Film adı:{result2.Title} Yıl:{result2.Year} Puan:{result2.Rating}";
+        }
 
 
 
