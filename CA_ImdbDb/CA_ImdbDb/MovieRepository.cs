@@ -135,6 +135,7 @@ namespace CA_ImdbDb
             List<int> dizi = new List<int>();
             List<int> dizi2 = new List<int>();
             List<int> dizi3 = new List<int>();
+            List<Movie> movies = new List<Movie>();
             Movie m = null;
 
             Console.WriteLine("Hangi tür filmler istiyorsanız sırasıyla yazınız.");
@@ -165,10 +166,11 @@ namespace CA_ImdbDb
                 {
                     m = db.Movies.FirstOrDefault(x => x.Id == i);
                     Console.WriteLine($"Id:{m.Id} Film adı:{m.Title} Yıl:{m.Year} Puan:{m.Rating}");
+                    movies.Add(m);
                 }
                 
             }
-            return "";
+            return $"{movies.Count} adet film listelenmiştir.";
         }
 
 
