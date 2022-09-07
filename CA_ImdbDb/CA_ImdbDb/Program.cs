@@ -48,6 +48,7 @@ namespace CA_ImdbDb
                             Console.WriteLine(movieRepository.GetByDescription());                            
                             break;
                         case SelectedItem.GetByGenre:
+                            Console.WriteLine(movieRepository.GetByGenre());
                             break;
                         case SelectedItem.RandomMovie:
                             Console.WriteLine(movieRepository.RandomMovie());

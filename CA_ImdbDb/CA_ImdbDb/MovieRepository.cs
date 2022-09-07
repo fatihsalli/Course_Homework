@@ -61,8 +61,35 @@ namespace CA_ImdbDb
 
         public string GetByGenre()
         {
-            
-            return $"";
+            List<int> dizi = new List<int>();
+            List<int> dizi2 = new List<int>();
+            Movie m = null;
+
+            Console.WriteLine("Hangi tür film istiyorsanız yazınız.");
+            string selected = Console.ReadLine();
+
+            var result = db.Genres.Where(x => x.Name.Contains(selected)).ToList();
+
+            foreach (Genre g in result)
+            {
+                dizi.Add(g.Id);
+            }
+
+            foreach (var item in db.MovieGenres.ToList())
+            {
+                if (item.GenreId == dizi[0])
+                {
+                    dizi2.Add(item.MovieId);
+                }
+            }
+
+            foreach (int i in dizi2)
+            {
+                m=db.Movies.FirstOrDefault(x => x.Id == i);
+                Console.WriteLine($"Id:{m.Id} Film adı:{m.Title} Yıl:{m.Year} Puan:{m.Rating}");
+            }
+            return $"{dizi2.Count} adet film listelenmiştir.";
+
         }
 
         public string RandomMovie()
