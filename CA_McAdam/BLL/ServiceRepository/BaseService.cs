@@ -10,7 +10,7 @@ namespace BLL.ServiceRepository
 {
     public class BaseService<T> : IService<T> where T : BaseClass
     {
-        McAdamDbContext db = new McAdamDbContext();
+        public McAdamDbContext db = new McAdamDbContext();
 
         public string Create(T entity)
         {

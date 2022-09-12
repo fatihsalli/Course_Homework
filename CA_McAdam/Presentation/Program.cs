@@ -10,10 +10,10 @@ namespace Presentation
         {
             int sayac = 0;
             Console.WriteLine("***Mac Adam'a Hoşgeldiniz****");
-            BaseService<OrderDetail> baseServiceOd = new();
-            BaseService<Product> baseServicePr = new();
-            BaseService<Customer> baseServiceCu = new();
-
+            BaseService<OrderDetail> serviceOrder = new();
+            BaseService<Product> serviceProduct = new();
+            BaseService<Customer> serviceCustomer = new();
+            OrderDetailRepository odRepository = new();
 
             while (sayac < 1)
             {
@@ -38,10 +38,10 @@ namespace Presentation
                                     customer.FirstName = Console.ReadLine();
                                     Console.WriteLine("Müşteri soyadı giriniz.");
                                     customer.LastName = Console.ReadLine();
-                                    
-                                    baseServiceCu.Create(customer);
 
-                                    foreach (Product item in baseServicePr.GetList())
+                                    serviceCustomer.Create(customer);
+
+                                    foreach (Product item in serviceProduct.GetList())
                                     {
                                         Console.WriteLine($"Id: {item.Id} Ürün adı: {item.ProductName} Ürün Fiyatı: {item.UnitPrice} Kategori: {item.CategoryId}");
                                     }
@@ -54,7 +54,7 @@ namespace Presentation
                                     orderDetail.EmployeeId = int.Parse(Console.ReadLine());
                                     orderDetail.CustomerId = customer.Id;
                                     
-                                    Console.WriteLine(baseServiceOd.Create(orderDetail));
+                                    Console.WriteLine(serviceOrder.Create(orderDetail));
 
                                     Console.WriteLine("Ekstra ürün girmek ister misiniz? Evet-[e] Hayır-[h]");
                                     string answer = Console.ReadLine();
@@ -68,7 +68,7 @@ namespace Presentation
                                         orderDetailExtra.Quantity = int.Parse(Console.ReadLine());
                                         orderDetailExtra.CustomerId = customer.Id;
                                         orderDetailExtra.EmployeeId = orderDetail.EmployeeId;
-                                        Console.WriteLine(baseServiceOd.Create(orderDetailExtra));
+                                        Console.WriteLine(serviceOrder.Create(orderDetailExtra));
                                     }
                                     else
                                     {
@@ -76,45 +76,57 @@ namespace Presentation
                                     }
                                     break;
                                 case 2:
-                                    foreach (OrderDetail item in baseServiceOd.GetList())
+                                    foreach (OrderDetail item in serviceOrder.GetList())
                                     {
                                         Console.WriteLine($"Sipariş Id:{item.Id} Ürün Id:{item.ProductId} Miktar:{item.Quantity}");
                                     }
-
-
-
                                     break;
                                 case 3:
-
+                                    Console.WriteLine("Güncellemek istediğiniz sipariş Id giriniz.");
+                                    int answerUpdated = int.Parse(Console.ReadLine());
+                                    OrderDetail odUpdated= serviceOrder.GetById(answerUpdated);
+                                    Console.WriteLine("Ürün Id giriniz.");
+                                    odUpdated.ProductId= int.Parse(Console.ReadLine());
+                                    Console.WriteLine("Müşteri Id giriniz.");
+                                    odUpdated.CustomerId = int.Parse(Console.ReadLine());
+                                    Console.WriteLine("Personel Id giriniz.");
+                                    odUpdated.EmployeeId = int.Parse(Console.ReadLine());
+                                    Console.WriteLine("Miktar giriniz.");
+                                    odUpdated.Quantity = int.Parse(Console.ReadLine());
+                                    Console.WriteLine(serviceOrder.Update(odUpdated));
                                     break;
                                 case 4:
-
+                                    Console.WriteLine("Silmek istediğiniz sipariş Id giriniz.");
+                                    int answerDeleted = int.Parse(Console.ReadLine());
+                                    Console.WriteLine(serviceOrder.Delete(answerDeleted));
                                     break;
-                                default:
+                                case 5:
                                     sayac++;
                                     break;
                             }
-
-
-
-
-
                             break;
                         case 2:
-
+                            Console.WriteLine($"Toplam ciro için [1]\nSipariş adeti için [2]\nMenü dışındaki sipariş toplamı için [3]\nÇıkış için [4]");
+                            int selected2 = int.Parse(Console.ReadLine());
+                            switch (selected2)
+                            {
+                                case 1:
+                                    Console.WriteLine(odRepository.TotalIncome());
+                                    break;
+                                case 2:
+                                    Console.WriteLine(odRepository.CountOrder());
+                                    break;
+                                case 3:
+                                    Console.WriteLine(odRepository.ExtraOrderIncome());
+                                    break;
+                                case 4:
+                                    break;
+                            }                     
                             break;
                         case 3:
-
-                            break;
-
-
-
-                        default:
-
+                            sayac++;
                             break;
                     }
-
-
                 }
                 catch (Exception ex)
                 {
