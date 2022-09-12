@@ -49,15 +49,15 @@ namespace CA_ImdbDb
                             break;
                         case SelectedItem.GetByGenre:
                             Console.WriteLine("Bir kategori adı girmek için [1]\nİki kategori adı girmek için [2]");
-                            int selection=int.Parse(Console.ReadLine());
-                            if (selection==1)
+                            int selection = int.Parse(Console.ReadLine());
+                            if (selection == 1)
                             {
                                 Console.WriteLine(movieRepository.GetByGenre());
                             }
-                            else if (selection==2)
+                            else if (selection == 2)
                             {
                                 Console.WriteLine(movieRepository.GetByGenreM());
-                            }                  
+                            }
                             break;
                         case SelectedItem.RandomMovie:
                             Console.WriteLine(movieRepository.RandomMovie());

@@ -173,6 +173,28 @@ namespace CA_ImdbDb
             return $"{movies.Count} adet film listelenmiştir.";
         }
 
+        //public void TureGoreFilmler()
+        //{
+
+        //    var result = from m in db.Movies
+        //                 join mg in db.MovieGenres on m.Id equals mg.MovieId
+        //                 join g in db.Genres on mg.GenreId equals g.Id
+        //                 select new
+        //                 {
+        //                     Genre = g.Name,
+        //                     MovieName = m.Title
+        //                 };
+
+        //    foreach (var item in result.Where(x => x.Genre == Console.ReadLine()))
+        //    {
+        //        Console.WriteLine($"Film Adı: {item.MovieName}");
+
+        //    }
+        //}
+
+
+
+
 
     }
 }

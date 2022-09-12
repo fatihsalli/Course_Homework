@@ -1,0 +1,15 @@
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\bin\Debug\net5.0\BLL.deps.json
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\bin\Debug\net5.0\BLL.dll
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\bin\Debug\net5.0\BLL.pdb
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\bin\Debug\net5.0\DataAccess.dll
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\obj\Debug\net5.0\BLL.csproj.AssemblyReference.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\obj\Debug\net5.0\BLL.csproj.CopyComplete
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\obj\Debug\net5.0\BLL.dll
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\obj\Debug\net5.0\refint\BLL.dll
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\obj\Debug\net5.0\BLL.pdb
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_McAdam\BLL\obj\Debug\net5.0\ref\BLL.dll
