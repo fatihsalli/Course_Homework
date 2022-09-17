@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{DBEB30CE-F0F3-478C-B669-A3BACA811711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{6A2C4286-2CC1-4CC3-9171-223BC6C3B97E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{288FF803-C19D-4865-A080-20CE67D0A776}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBEB30CE-F0F3-478C-B669-A3BACA811711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBEB30CE-F0F3-478C-B669-A3BACA811711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBEB30CE-F0F3-478C-B669-A3BACA811711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBEB30CE-F0F3-478C-B669-A3BACA811711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A2C4286-2CC1-4CC3-9171-223BC6C3B97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A2C4286-2CC1-4CC3-9171-223BC6C3B97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A2C4286-2CC1-4CC3-9171-223BC6C3B97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A2C4286-2CC1-4CC3-9171-223BC6C3B97E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288FF803-C19D-4865-A080-20CE67D0A776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288FF803-C19D-4865-A080-20CE67D0A776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288FF803-C19D-4865-A080-20CE67D0A776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288FF803-C19D-4865-A080-20CE67D0A776}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3EA2C4C0-E0D8-491F-8B12-02E59E9537C8}
+	EndGlobalSection
+EndGlobal

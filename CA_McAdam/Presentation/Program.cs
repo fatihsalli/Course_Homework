@@ -8,17 +8,16 @@ namespace Presentation
     {
         static void Main(string[] args)
         {
-            int sayac = 0;
-            Console.WriteLine("***Mac Adam'a Hoşgeldiniz****");
             BaseService<OrderDetail> serviceOrder = new();
             BaseService<Product> serviceProduct = new();
             BaseService<Customer> serviceCustomer = new();
             OrderDetailRepository odRepository = new();
 
-            while (sayac < 1)
+            while (true)
             {
                 try
                 {
+                    Console.WriteLine("***Mac Adam'a Hoşgeldiniz****");
                     Console.WriteLine($"Sipariş ekranı için [1]\nYönetici ekranı için [2]\nÇıkış için [3]");
                     int selected = int.Parse(Console.ReadLine());
 
@@ -39,11 +38,9 @@ namespace Presentation
                                     Console.WriteLine("Müşteri soyadı giriniz.");
                                     customer.LastName = Console.ReadLine();
 
-                                    serviceCustomer.Create(customer);
-
-                                    foreach (Product item in serviceProduct.GetList())
+                                    foreach (Product item in serviceProduct.db.Products)
                                     {
-                                        Console.WriteLine($"Id: {item.Id} Ürün adı: {item.ProductName} Ürün Fiyatı: {item.UnitPrice} Kategori: {item.CategoryId}");
+                                        Console.WriteLine($"Ürün Id:{item.Id} Ürün adı:{item.ProductName} Fiyatı:{item.UnitPrice}");
                                     }
 
                                     Console.WriteLine("Ürün Id giriniz.");
@@ -76,10 +73,7 @@ namespace Presentation
                                     }
                                     break;
                                 case 2:
-                                    foreach (OrderDetail item in serviceOrder.GetList())
-                                    {
-                                        Console.WriteLine($"Sipariş Id:{item.Id} Ürün Id:{item.ProductId} Miktar:{item.Quantity}");
-                                    }
+                                    odRepository.GetListOrder();
                                     break;
                                 case 3:
                                     Console.WriteLine("Güncellemek istediğiniz sipariş Id giriniz.");
@@ -101,8 +95,7 @@ namespace Presentation
                                     Console.WriteLine(serviceOrder.Delete(answerDeleted));
                                     break;
                                 case 5:
-                                    sayac++;
-                                    break;
+                                    return;                                   
                             }
                             break;
                         case 2:
@@ -124,8 +117,7 @@ namespace Presentation
                             }                     
                             break;
                         case 3:
-                            sayac++;
-                            break;
+                            return;
                     }
                 }
                 catch (Exception ex)

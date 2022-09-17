@@ -1,0 +1,15 @@
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.json
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.dev.json
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\bin\Debug\net5.0\DataAccess.dll
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\obj\Debug\net5.0\DataAccess.dll
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\obj\Debug\net5.0\refint\DataAccess.dll
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache
+C:\Users\salli\OneDrive\Masaüstü\Odev\CA_E-Commerce\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll

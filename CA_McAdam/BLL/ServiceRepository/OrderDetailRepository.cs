@@ -57,5 +57,33 @@ namespace BLL.ServiceRepository
             return $"Menü Dışı Toplam Ciro: {totalIncome} TL (KDV Dahil)";
 
         }
+
+        public void GetListOrder()
+        {
+            var list= from d1 in db.OrderDetails
+                      join d2 in db.Products on d1.ProductId equals d2.Id
+                      join d3 in db.Categories on d2.CategoryId equals d3.Id
+                      select new
+                      {
+                          d1.Id,
+                          d2.ProductName,
+                          d1.Quantity,
+                          d2.UnitPrice,
+                          d3.CategoryName
+                      };
+
+            foreach (var item in list)
+            {
+                Console.WriteLine($"Sipariş Id: {item.Id} Ürün adı:{item.ProductName} Miktar: {item.Quantity} Birim Fiyat: {item.UnitPrice} Kategori: {item.CategoryName} Sipariş Tutarı: {item.UnitPrice*item.Quantity} TL");
+            }
+        }
+
+
+
+
+
+
+
+
     }
 }
