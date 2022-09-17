@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Context
 {
-    public class ProjectDbContext:DbContext
+    public class ProjectDbContext : DbContext
     {
 
         public DbSet<Order> Orders { get; set; }
@@ -16,24 +16,17 @@ namespace DataAccess.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Fluent API
-            //modelBuilder.Entity<OrderDetail>().Ignore(x => x.Id);
-            //modelBuilder.Entity<OrderDetail>().HasKey(x => new { x.OrderId, x.ProductId });
-
-            //modelBuilder.Entity<Product>().HasAlternateKey(x => new { x.SupplierId, x.CategoryId });
-
-
-
-
+            //Fluent API Yöntemi
+            modelBuilder.Entity<OrderDetail>().Ignore(x => x.Id);
+            modelBuilder.Entity<OrderDetail>().HasKey(x => new { x.OrderId, x.ProductId });
+         
             base.OnModelCreating(modelBuilder);
         }
-
-
-
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20220917134407_VA")]
-    partial class VA
+    [Migration("20220917171117_V01")]
+    partial class V01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -85,21 +85,32 @@ namespace DataAccess.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SupplierId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
 
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("DataAccess.Entity.OrderDetail", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("OrderId", "ProductId");
+
                     b.HasIndex("ProductId");
 
-                    b.HasIndex("SupplierId");
-
-                    b.ToTable("Orders");
+                    b.ToTable("OrderDetails");
                 });
 
             modelBuilder.Entity("DataAccess.Entity.Product", b =>
@@ -165,21 +176,26 @@ namespace DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DataAccess.Entity.Product", "Product")
-                        .WithMany("Orders")
-                        .HasForeignKey("ProductId");
+                    b.Navigation("Customer");
+                });
 
-                    b.HasOne("DataAccess.Entity.Supplier", "Supplier")
-                        .WithMany("Orders")
-                        .HasForeignKey("SupplierId")
+            modelBuilder.Entity("DataAccess.Entity.OrderDetail", b =>
+                {
+                    b.HasOne("DataAccess.Entity.Order", "Order")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Customer");
+                    b.HasOne("DataAccess.Entity.Product", "Product")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
 
                     b.Navigation("Product");
-
-                    b.Navigation("Supplier");
                 });
 
             modelBuilder.Entity("DataAccess.Entity.Product", b =>
@@ -211,15 +227,18 @@ namespace DataAccess.Migrations
                     b.Navigation("Orders");
                 });
 
+            modelBuilder.Entity("DataAccess.Entity.Order", b =>
+                {
+                    b.Navigation("OrderDetails");
+                });
+
             modelBuilder.Entity("DataAccess.Entity.Product", b =>
                 {
-                    b.Navigation("Orders");
+                    b.Navigation("OrderDetails");
                 });
 
             modelBuilder.Entity("DataAccess.Entity.Supplier", b =>
                 {
-                    b.Navigation("Orders");
-
                     b.Navigation("Products");
                 });
 #pragma warning restore 612, 618

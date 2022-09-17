@@ -10,7 +10,6 @@ namespace DataAccess.Entity
     {
         public string CompanyName { get; set; }
         public List<Product> Products { get; set; }
-        public List<Order> Orders { get; set; }
 
     }
 }
