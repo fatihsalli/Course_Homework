@@ -8,7 +8,7 @@ namespace DataAccess.Entity
 {
     public class Category:BaseClass
     {
-        public int CategoryName { get; set; }
+        public string CategoryName { get; set; }
         public List<Product> Products { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BLL.Service;
+using BLL.ServiceRepository.Concrete;
 using DataAccess.Entity;
 using DataAccess.Enum;
 using System;
@@ -10,20 +11,18 @@ namespace Presentation
     {
         static void Main(string[] args)
         {
-            //List<Customer> list = new List<Customer>
-            //{
-            //    new Customer{Id=1,Firstname="Hasan",Lastname="Mermerci",CustomerType=CustomerType.standart},
-            //    new Customer{Id=2,Firstname="Merve",Lastname="Mermerci",CustomerType=CustomerType.premium},
-            //    new Customer{Id=3,Firstname="Gamze",Lastname="Mermerci",CustomerType=CustomerType.diamond}
-            //};
+            BaseService<Product> product = new();
 
-            //CustomerFactoryService customerFactoryService = new CustomerFactoryService(list);
+            Console.WriteLine("******************************");
+            Console.WriteLine("E-ticaret sitesine hoşgeldiniz");
+            Console.WriteLine("******************************");
 
-            //Console.WriteLine(customerFactoryService.GetDiscount(1));
-            //Console.WriteLine(customerFactoryService.GetDiscount(2));
-            //Console.WriteLine(customerFactoryService.GetDiscount(3));
+            Console.WriteLine("Hadi alışverişe başlayalım! Ürün listesi aşağıdadır.");
 
-
+            foreach (Product item in product.GetAll())
+            {
+                Console.WriteLine($"Id:{item.Id} Ürün adı:{item.ProductName}");
+            }
 
 
 

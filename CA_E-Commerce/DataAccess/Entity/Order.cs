@@ -9,7 +9,7 @@ namespace DataAccess.Entity
 {
     public class Order:BaseClass
     {
-        [ForeignKey(nameof(Customer))] //Data Annotations Yöntemi
+        /*[ForeignKey(nameof(Customer))]*/ //Data Annotations Yöntemi
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }

@@ -16,22 +16,22 @@ namespace BLL.Service
             _customers = customers;
         }
 
-        //public double GetDiscount(int customerId)
-        //{
-        //    CustomerFactory customerFactory=new CustomerFactory();
-        //    double discount = 0;
+        public double GetDiscount(int customerId)
+        {
+            CustomerFactory customerFactory = new CustomerFactory();
+            double discount = 0;
 
-        //    foreach (Customer customer in _customers)
-        //    {
-        //        if (customer.Id== customerId)
-        //        {
-        //            GetCustomerType userType = customerFactory.FactoryMethod(customer.CustomerType);
-        //            discount = userType.CustomerDiscount();
-        //            break;
-        //        }
-        //    }
-        //    return discount;
-        //}
+            foreach (Customer customer in _customers)
+            {
+                if (customer.Id == customerId)
+                {
+                    GetCustomerType userType = customerFactory.FactoryMethod(customer.CustomerType);
+                    discount = userType.CustomerDiscount();
+                    break;
+                }
+            }
+            return discount;
+        }
 
 
 

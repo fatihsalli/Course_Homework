@@ -12,10 +12,10 @@ namespace DataAccess.Entity
         public string ProductName { get; set; }
         public decimal UnitPrice { get; set; }
 
-        [ForeignKey(nameof(Category))] //Data Annotations Yöntemi
+        /*[ForeignKey(nameof(Category))]*/ //Data Annotations Yöntemi
         public int CategoryId { get; set; }
 
-        [ForeignKey(nameof(Supplier))] //Data Annotations Yöntemi
+        /*[ForeignKey(nameof(Supplier))]*/ //Data Annotations Yöntemi
         public int SupplierId { get; set; }
 
         public Category Category { get; set; }

@@ -24,7 +24,22 @@ namespace DataAccess.Context
             //Fluent API Yöntemi
             modelBuilder.Entity<OrderDetail>().Ignore(x => x.Id);
             modelBuilder.Entity<OrderDetail>().HasKey(x => new { x.OrderId, x.ProductId });
-         
+
+            //Özellikler kontrol
+            modelBuilder.Entity<Supplier>().Property(x=> x.CompanyName).IsRequired(true);
+            modelBuilder.Entity<Supplier>().Property(x => x.CompanyName).HasMaxLength(250);
+
+            modelBuilder.Entity<Product>().Property(x => x.ProductName).IsRequired(true);
+            modelBuilder.Entity<Product>().Property(x => x.ProductName).HasMaxLength(50);
+
+            modelBuilder.Entity<Category>().Property(x => x.CategoryName).IsRequired(true);
+            modelBuilder.Entity<Category>().Property(x => x.CategoryName).HasMaxLength(50);
+
+            modelBuilder.Entity<Customer>().Property(x => x.Firstname).IsRequired(true);
+            modelBuilder.Entity<Customer>().Property(x => x.Firstname).HasMaxLength(50);
+            modelBuilder.Entity<Customer>().Property(x => x.Lastname).IsRequired(true);
+            modelBuilder.Entity<Customer>().Property(x => x.Lastname).HasMaxLength(50);
+
             base.OnModelCreating(modelBuilder);
         }
 
