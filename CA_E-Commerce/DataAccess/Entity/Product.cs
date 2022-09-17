@@ -16,6 +16,7 @@ namespace DataAccess.Entity
         public int SupplierId { get; set; }
         public Category Category { get; set; }
         public Supplier Supplier { get; set; }
+        public List<Order> Orders { get; set; }
 
     }
 }

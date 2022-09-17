@@ -4,6 +4,69 @@
     "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\Presentation\\Presentation.csproj": {}
   },
   "projects": {
+    "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\BLL\\BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\BLL\\BLL.csproj",
+        "projectName": "BLL",
+        "projectPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\salli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\salli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\DataAccess\\DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -109,6 +172,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\BLL\\BLL.csproj": {
+                "projectPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\BLL\\BLL.csproj"
+              },
               "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\DataAccess\\DataAccess.csproj": {
                 "projectPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\DataAccess\\DataAccess.csproj"
               }

@@ -1718,6 +1718,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "DataAccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BLL.dll": {}
+        }
+      },
       "DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5943,6 +5956,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "BLL/1.0.0": {
+      "type": "project",
+      "path": "../BLL/BLL.csproj",
+      "msbuildProject": "../BLL/BLL.csproj"
+    },
     "DataAccess/1.0.0": {
       "type": "project",
       "path": "../DataAccess/DataAccess.csproj",
@@ -5951,6 +5969,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BLL >= 1.0.0",
       "DataAccess >= 1.0.0"
     ]
   },
@@ -5986,6 +6005,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\BLL\\BLL.csproj": {
+              "projectPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\BLL\\BLL.csproj"
+            },
             "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\DataAccess\\DataAccess.csproj": {
               "projectPath": "C:\\Users\\salli\\OneDrive\\Masaüstü\\Odev\\CA_E-Commerce\\DataAccess\\DataAccess.csproj"
             }
