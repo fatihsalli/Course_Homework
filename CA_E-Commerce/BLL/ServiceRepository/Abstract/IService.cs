@@ -23,5 +23,11 @@ namespace BLL.ServiceRepository.Abstract
 
         //GetById
         T GetById(int id);
+
+
+
+
+
+
     }
 }

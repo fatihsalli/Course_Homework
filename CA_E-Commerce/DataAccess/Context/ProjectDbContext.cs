@@ -47,7 +47,7 @@ namespace DataAccess.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-5TJ97HC\\SQLEXPRESS;Database=ECommerceDB;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-5TJ97HC\\SQLEXPRESS;Database=ECommerce;Trusted_Connection=True;");
             }
             base.OnConfiguring(optionsBuilder);
         }
