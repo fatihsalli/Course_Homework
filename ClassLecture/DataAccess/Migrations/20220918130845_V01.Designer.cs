@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20220918102715_V02")]
-    partial class V02
+    [Migration("20220918130845_V01")]
+    partial class V01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -41,7 +41,7 @@ namespace DataAccess.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<DateTime>("LectureDate")
+                    b.Property<DateTime?>("LectureDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("TopicId")

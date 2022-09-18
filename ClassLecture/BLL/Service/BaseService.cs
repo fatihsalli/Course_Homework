@@ -16,13 +16,20 @@ namespace BLL.Service
         {          
             foreach (T entity in list)
             {
-                ProjectDbSingleton.Context.Add(entity);
+                ProjectDbSingleton.Context.Set<T>().Add(entity);
                 ProjectDbSingleton.Context.SaveChanges();
             }
 
             return $"{typeof(T)} tipindeki veriler eklenmiştir.";
-
         }
+
+        public List<T> GetAll()
+        {
+            return ProjectDbSingleton.Context.Set<T>().ToList();
+        }
+
+        
+
 
     }
 }

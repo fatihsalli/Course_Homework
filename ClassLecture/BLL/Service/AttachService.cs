@@ -13,7 +13,7 @@ namespace BLL.Service
     {
         public int[] RandomNumber()
         {
-            int[] dizi = new int[18];
+            int[] dizi = new int[TemporaryDb.students.Count];
             Random random = new Random();
 
             for (int i = 0; i < dizi.Length; i++)
@@ -32,20 +32,17 @@ namespace BLL.Service
             return dizi;
         }
 
-        public List<Student> AttachTopic(List<Student> students)
+        public List<Student> AttachTopic(List<Student> students, int[] ints)
         {
             int i = 0;
             foreach (Student item in students)
             {
-                item.TopicId = RandomNumber()[i];
+                item.TopicId = ints[i];
+                i++;
             }
             return students;
         }
 
-        
-
-
-
-
+       
     }
 }

@@ -19,13 +19,10 @@ namespace DataAccess.Context
             modelBuilder.Entity<Student>().Property(x => x.FirstName).HasMaxLength(50);
             modelBuilder.Entity<Student>().Property(x => x.Lastname).IsRequired(true);
             modelBuilder.Entity<Student>().Property(x => x.Lastname).HasMaxLength(50);
-
             modelBuilder.Entity<Topic>().Property(x => x.TopicName).IsRequired(true);
             modelBuilder.Entity<Topic>().Property(x => x.TopicName).HasMaxLength(250);
 
             modelBuilder.Entity<Student>().Property(x => x.LectureDate).IsRequired(false);
-            modelBuilder.Entity<Student>().Property(x => x.IsLecture).IsRequired(false);
-
 
             base.OnModelCreating(modelBuilder);
         }

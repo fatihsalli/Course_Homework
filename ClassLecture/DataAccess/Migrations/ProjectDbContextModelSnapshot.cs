@@ -39,7 +39,7 @@ namespace DataAccess.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<DateTime>("LectureDate")
+                    b.Property<DateTime?>("LectureDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("TopicId")

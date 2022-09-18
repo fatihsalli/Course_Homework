@@ -12,8 +12,8 @@ namespace DataAccess.Entity
         public string Lastname { get; set; }
         public int TopicId { get; set; }
         public Topic Topic { get; set; }
-        public bool IsLecture { get; set; }
-        public DateTime LectureDate { get; set; }
+        public bool IsLecture { get; set; } = false;
+        public DateTime? LectureDate { get; set; }
 
     }
 }
