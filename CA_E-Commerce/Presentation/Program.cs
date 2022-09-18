@@ -13,58 +13,36 @@ namespace Presentation
     internal class Program
     {
         static void Main(string[] args)
-        {
-            BaseService<Product> product = new();
+        {            
+            MessageService message=new MessageService();
+            BaseService<Product> baseProduct = new BaseService<Product>();
+            BaseService<Order> baseOrder = new BaseService<Order>();
+            BaseService<OrderDetail> baseOrderDetail = new BaseService<OrderDetail>();
+            BaseService<Category> baseCategory = new BaseService<Category>();
+            OrderService orderService = new OrderService();
 
-            CustomerFactoryService customerFactoryService = new CustomerFactoryService(ProjectDbSingleton.Context.Customers.ToList());
+            message.Greeting();
+            string selected=message.CategoryList(baseCategory.GetAll());
+            message.ProductList(selected);
+            int customerId = message.GetCustomerId();
+            Order order = orderService.GetOrder(customerId);
+            baseOrder.Create(order);
 
-            Console.WriteLine("******************************");
-            Console.WriteLine("E-ticaret sitesine hoşgeldiniz");
-            Console.WriteLine("******************************");
-
-            Console.WriteLine("Hadi alışverişe başlayalım! Ürün listesi aşağıdadır.");
-
-            //foreach (Product item in product.GetAll())
-            //{
-            //    Console.WriteLine($"Id:{item.Id} Ürün adı:{item.ProductName} Fiyatı:{item.UnitPrice}");
-            //    Console.WriteLine("**********************");
-            //}
-
-            //Console.WriteLine("Sepete eklemek istediğiniz ürün Id'sini giriniz.");
-            //int selected=int.Parse(Console.ReadLine());
-            //Product product1 = product.GetById(10);
-
-            //Console.WriteLine("Başka ürün eklemek ister misiniz? Evet[e] Hayır[h]");
-
-            //int selected2 = int.Parse(Console.ReadLine());
-
-
-
-
-            Product product1 = product.GetById(22);
-
-            Order order = new Order()
+            while (true)
             {
-                CustomerId=6,
-                
-            
-            };
-            ProjectDbSingleton.Context.Orders.Add(order);
-            ProjectDbSingleton.Context.SaveChanges();
+                OrderDetail orderDetail = orderService.GetOrderDetail(message.GetOrderProductId(),message.GetOrderCount(),customerId);
+                baseOrderDetail.Create(orderDetail);
 
+                if (message.GetOrderProductIdContinue() == "e")
+                {
+                    continue;
+                }
+                else
+                {
+                    break;
+                }
+            }
 
-            OrderDetail orderDetail1 = new OrderDetail()
-            {
-                ProductId=product1.Id,
-                OrderId=ProjectDbSingleton.Context.Orders.Max(x=> x.Id),
-                UnitPrice=product1.UnitPrice*(decimal)(customerFactoryService.GetDiscount(order.CustomerId)),
-                Count=1
-            };
-
-
-            
-            ProjectDbSingleton.Context.OrderDetails.Add(orderDetail1);
-            ProjectDbSingleton.Context.SaveChanges();
 
 
 
