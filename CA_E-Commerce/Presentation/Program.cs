@@ -23,7 +23,6 @@ namespace Presentation
             BaseService<Category> baseCategory = new BaseService<Category>();
             OrderService orderService = new OrderService();
             
-
             message.Greeting();
             int customerId = message.GetCustomerId();
             message.GetCustomerInfo(baseCustomer.GetById(customerId));
