@@ -12,10 +12,7 @@ namespace BLL.Service
 {
     public class OrderService
     {
-        BaseService<Product> _baseService = new BaseService<Product>();
-        CustomerFactoryService customerFactoryService = new CustomerFactoryService(ProjectDbSingleton.Context.Customers.ToList());
-
-
+        public static decimal totalPrice=0;
         public Order GetOrder(int customerId)
         {
             Order order = new Order()
@@ -25,19 +22,23 @@ namespace BLL.Service
             return order;
         }
 
-        public OrderDetail GetOrderDetail(int productId, int count,int customerId)
+        public OrderDetail GetOrderDetail(Product product, int count,int customerId,double discount)
         {
             OrderDetail orderDetail = new OrderDetail()
             {
                 OrderId = ProjectDbSingleton.Context.Orders.Max(x => x.Id),
-                ProductId=productId,
+                ProductId=product.Id,
                 Count=count,
-                UnitPrice=_baseService.GetById(productId).UnitPrice*(decimal)customerFactoryService.GetDiscount(customerId),
+                UnitPrice=product.UnitPrice*(decimal)discount
             };
             return orderDetail;
         }
 
-
+        public decimal OrderSummary(OrderDetail orderDetail)
+        {
+            totalPrice += orderDetail.UnitPrice * orderDetail.Count;
+            return totalPrice;
+        }
 
 
 

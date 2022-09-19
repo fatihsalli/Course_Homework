@@ -91,6 +91,19 @@ namespace BLL.Service
             return selected;
         }
 
+        public void GetCustomerInfo(Customer customer)
+        {
+            Console.WriteLine("************************");
+            Console.WriteLine($"{customer.Firstname} {customer.Lastname} hoşgeldiniz.");
+            Console.WriteLine($"Müşteri seviyeniz: {customer.CustomerType}");
+            Console.WriteLine("************************");
+        }
+
+
+
+
+
+
 
 
     }
