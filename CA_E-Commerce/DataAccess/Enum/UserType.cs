@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Enum
 {
-    internal enum UserType
+    public enum UserType
     {
         Customer=1,
-        Guest,
         Admin
     }
 }

@@ -1,21 +1,34 @@
 ﻿using BLL.ServiceRepository.Concrete;
 using DataAccess.Entity;
+using DataAccess.Enum;
 using DataAccess.Singleton;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace BLL.Service
 {
     public class MessageService
     {
-        public void Greeting()
+        public UserType Greeting()
         {
             Console.WriteLine("*******************************");
             Console.WriteLine("E-ticaret sitesine hoşgeldiniz!");
+            Console.WriteLine("Müşteri girişi için [1]");
+            Console.WriteLine("Yönetici girişi için [2]");
             Console.WriteLine("*******************************");
+            int selected = int.Parse(Console.ReadLine());
+            if (selected == 1)
+            {
+                return UserType.Customer;
+            }
+            else
+            {
+                return UserType.Admin;
+            }
         }
 
         public string CategoryList(List<Category> categories)
@@ -29,7 +42,7 @@ namespace BLL.Service
             }
 
             Console.WriteLine("Hangi kategoride ürün arıyorsunuz lütfen yazınız.");
-            string selected=Console.ReadLine();
+            string selected = Console.ReadLine();
             return selected;
         }
 
@@ -39,7 +52,7 @@ namespace BLL.Service
 
             var list = from d1 in ProjectDbSingleton.Context.Products
                        join d2 in ProjectDbSingleton.Context.Categories on d1.CategoryId equals d2.Id
-                       where d2.CategoryName==selected
+                       where d2.CategoryName == selected
                        select new
                        {
                            d1.Id,
@@ -99,11 +112,55 @@ namespace BLL.Service
             Console.WriteLine("************************");
         }
 
+        public AdminProcess AdminGreeting()
+        {
+            Console.WriteLine("*******************************");
+            Console.WriteLine("Yönetici paneline hoşgeldiniz!");
+            Console.WriteLine("Ürün CRUD işlemleri için [1]");
+            Console.WriteLine("Kategori CRUD işlemleri için [2]");
+            Console.WriteLine("Satış raporları için [3]");
+            Console.WriteLine("*******************************");
+            int selected = int.Parse(Console.ReadLine());
+            if (selected == 1)
+            {
+                return AdminProcess.ProductCRUD;
+            }
+            else if (selected == 2)
+            {
+                return AdminProcess.CategoryCRUD;
+            }
+            else
+            {
+                return AdminProcess.OrderReport;
+            }
+        }
 
-
-
-
-
+        public CRUD AdminCRUD()
+        {
+            Console.WriteLine("*******************************");
+            Console.WriteLine("Yönetici paneline hoşgeldiniz!");
+            Console.WriteLine("Ekleme işlemleri için [1]");
+            Console.WriteLine("Güncelleme işlemleri için [2]");
+            Console.WriteLine("Silme işlemleri için [3]");
+            Console.WriteLine("Listeleme işlemleri için [4]");
+            int selected = int.Parse(Console.ReadLine());
+            if (selected == 1)
+            {
+                return CRUD.Create;
+            }
+            else if (selected == 2)
+            {
+                return CRUD.Update;
+            }
+            else if(selected == 3)
+            {
+                return CRUD.Delete;
+            }
+            else
+            {
+                return CRUD.List;
+            }
+        }
 
 
     }

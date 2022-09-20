@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Enum
 {
-    public enum AdminProcess
+    public enum CRUD
     {
-        ProductCRUD=1,
-        CategoryCRUD,
-        OrderReport,
+        Create=1,
+        Update,
+        Delete,
+        List
     }
 }
