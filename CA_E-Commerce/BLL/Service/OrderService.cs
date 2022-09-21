@@ -31,7 +31,6 @@ namespace BLL.Service
                 Count=count,
                 UnitPrice=product.UnitPrice*(decimal)discount
             };
-            //orderDetail.UnitPrice=orderDetail.UnitPrice * (decimal)ExtraDiscount.GetDiscount(orderDetail);
             return orderDetail;
         }
 

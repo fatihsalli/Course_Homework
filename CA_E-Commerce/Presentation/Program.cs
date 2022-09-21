@@ -32,7 +32,6 @@ namespace Presentation
             SupplierGetInfo supplierGetInfo= new SupplierGetInfo();
             ExtraDiscount extraDiscount= new ExtraDiscount();
 
-
             try
             {
                 while (true)
@@ -49,6 +48,8 @@ namespace Presentation
                             while (true)
                             {
                                 OrderDetail orderDetail = orderService.GetOrderDetail(baseProduct.GetById(message.GetOrderProductId()), message.GetOrderCount(), customerId, customerFactoryService.GetDiscount(customerId));
+                                List<int> list=extraDiscount.GetExtraDiscount();
+                                orderDetail=extraDiscount.GetExtraDiscountCheck(orderDetail, list);
                                 baseOrderDetail.Create(orderDetail);
                                 orderService.OrderSummary(orderDetail);
                                 if (message.GetOrderProductIdContinue() == "e")
@@ -104,8 +105,8 @@ namespace Presentation
                                     {
                                         Console.WriteLine($"{item.Id} {item.CompanyName}");
                                     }
-                                    //extraDiscount.GetDiscountId();
-                                    //extraDiscount.GetDiscountNumber();
+                                    extraDiscount.GetDiscountId();
+                                    extraDiscount.GetDiscountNumber();
                                     break;
                             }
                             break;
