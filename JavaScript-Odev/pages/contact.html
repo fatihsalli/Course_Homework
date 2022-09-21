@@ -1,0 +1,160 @@
+﻿<html>
+<head>
+
+    <title>Northwind</title>
+    <!--Bootstrap-->
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <!--Custom css-->
+    <link href="/style/site.css" rel="stylesheet"/>
+    <script src="js/contact.js"></script>
+    <script>
+        function DegerYakala() {
+
+            var firstname = document.getElementById('firstname').value;
+            var lastname = document.getElementById('lastname').value;
+            var email = document.getElementById('email').value;
+            var adress = document.getElementById('address').value;
+            var subject = document.getElementById('subject').value;
+
+            document.getElementById('name1').innerText = firstname;
+            document.getElementById('lastname1').innerText = lastname;
+            document.getElementById('email1').innerText = email;
+            document.getElementById('adress1').innerText = adress;
+            document.getElementById('subject1').innerText = subject;
+
+            console.log(firstname + " " + lastname + " " + email + " " + adress + " " + subject);
+
+        }
+    </script>
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Northwind</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="/index.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="/pages/product.html">Urunler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-3" href="/pages/contact.html">Iletisim</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+
+                    <a href="/pages/register.html" class="btn btn-sm btn-outline-success mt-2">Kayit</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--Content-->
+
+
+    <div class="row g-3 w-50 ms-sm-5">
+
+        <div class="card-header-tabs ">
+            <h2>İletişim Formu</h2>
+        </div>
+
+        <div class="col-sm-6">
+            <label for="firstName" class="form-label">Ad</label>
+            <input type="text" class="form-control" id="firstname" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+                Valid first name is required.
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <label for="lastName" class="form-label">Soyad</label>
+            <input type="text" class="form-control" id="lastname" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+                Valid last name is required.
+            </div>
+        </div>
+
+        <div class="col-12">
+            <label for="email" class="form-label">Email <span class="text-muted">(Opsiyonel)</span></label>
+            <input type="email" class="form-control" id="email" placeholder="sallifatih@example.com">
+            <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+            </div>
+        </div>
+
+        <div class="col-12">
+            <label for="address" class="form-label">Adres</label>
+            <input type="text" class="form-control" id="address" placeholder="Eski Osmanlı sk." required="">
+            <div class="invalid-feedback">
+                Please enter your shipping address.
+            </div>
+        </div>
+
+        <div class="col-12">
+            <label for="address2" class="form-label">Konu <span class="text-muted">(Opsiyonel)</span></label>
+            <input type="text" class="form-control h-100" id="subject" placeholder="Bu yazıyı yazma nedenimiz...">
+        </div>
+
+        <button class="w-25 btn btn-primary btn-lg mt-5 ms-auto" onclick="DegerYakala()" type="submit">Gönder</button>
+
+    </div>
+
+
+    <!--Product List-->
+    <div class="container-fluid mt-2 ">
+        <div class="row">
+            <div class="card">
+                <div class="card-header">
+                    <h2>İletişim Form Listesi</h2>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>İsim</th>
+                                <th>Soyisim</th>
+                                <th>Email</th>
+                                <th>Adres</th>
+                                <th>Konu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="name1"></td>
+                                <td id="lastname1"></td>
+                                <td id="email1"></td>
+                                <td id="adress1"></td>
+                                <td id="subject1"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!--Footer-->
+    <footer class="bg-secondary">
+        <div class="container mt-5">
+            <div class="row">
+                <p class="text-center">Copyright - 2022</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
