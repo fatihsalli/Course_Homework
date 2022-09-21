@@ -119,6 +119,7 @@ namespace BLL.Service
             Console.WriteLine("Ürün CRUD işlemleri için [1]");
             Console.WriteLine("Hangi mağazada hangi kategoride ürün olduğu bilgisi için [2]");
             Console.WriteLine("Satış raporları için [3]");
+            Console.WriteLine("Mağazaya kampanya tanımlamak için [4]");
             Console.WriteLine("*******************************");
             int selected = int.Parse(Console.ReadLine());
             if (selected == 1)
@@ -129,9 +130,13 @@ namespace BLL.Service
             {
                 return AdminProcess.SupplierInfo;
             }
-            else
+            else if (selected == 3)
             {
                 return AdminProcess.OrderReport;
+            }
+            else
+            {
+                return AdminProcess.ExtraDiscount;
             }
         }
 

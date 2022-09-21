@@ -11,5 +11,6 @@ namespace DataAccess.Enum
         ProductCRUD=1,
         SupplierInfo,
         OrderReport,
+        ExtraDiscount
     }
 }
