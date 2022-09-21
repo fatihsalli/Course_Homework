@@ -9,7 +9,7 @@ namespace DataAccess.Enum
     public enum AdminProcess
     {
         ProductCRUD=1,
-        CategoryCRUD,
+        SupplierInfo,
         OrderReport,
     }
 }

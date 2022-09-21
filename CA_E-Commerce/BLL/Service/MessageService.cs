@@ -117,7 +117,7 @@ namespace BLL.Service
             Console.WriteLine("*******************************");
             Console.WriteLine("Yönetici paneline hoşgeldiniz!");
             Console.WriteLine("Ürün CRUD işlemleri için [1]");
-            Console.WriteLine("Kategori CRUD işlemleri için [2]");
+            Console.WriteLine("Hangi mağazada hangi kategoride ürün olduğu bilgisi için [2]");
             Console.WriteLine("Satış raporları için [3]");
             Console.WriteLine("*******************************");
             int selected = int.Parse(Console.ReadLine());
@@ -127,7 +127,7 @@ namespace BLL.Service
             }
             else if (selected == 2)
             {
-                return AdminProcess.CategoryCRUD;
+                return AdminProcess.SupplierInfo;
             }
             else
             {

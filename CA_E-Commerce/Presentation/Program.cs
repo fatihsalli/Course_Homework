@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Pipes;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Presentation
 {
@@ -23,9 +24,12 @@ namespace Presentation
             BaseService<Order> baseOrder = new BaseService<Order>();
             BaseService<OrderDetail> baseOrderDetail = new BaseService<OrderDetail>();
             BaseService<Category> baseCategory = new BaseService<Category>();
+            BaseService<Supplier> baseSupplier = new BaseService<Supplier>();
             OrderService orderService = new OrderService();
             ReportService reportService= new ReportService();
             ProductService productService= new ProductService();
+            SupplierGetInfo supplierGetInfo= new SupplierGetInfo();
+
 
             switch (message.Greeting()) //Müşteri ve admin ayrımı için
             {
@@ -79,22 +83,12 @@ namespace Presentation
                                     break;
                             }
                             break;
-                        case AdminProcess.CategoryCRUD:
-                            switch (message.AdminCRUD())
+                        case AdminProcess.SupplierInfo:
+                            foreach (Supplier item in baseSupplier.GetAll())
                             {
-                                case CRUD.Create:
-
-                                    break;
-                                case CRUD.Update:
-
-                                    break;
-                                case CRUD.Delete:
-
-                                    break;
-                                case CRUD.List:
-
-                                    break;
+                                Console.WriteLine($"Şirket adı:{item.CompanyName}");
                             }
+                            supplierGetInfo.SupplierInfo();
                             break;
                         case AdminProcess.OrderReport:
                             Console.WriteLine(reportService.GetOrderReport());
