@@ -49,17 +49,7 @@ class Basket {
         }
         document.getElementById('totalPrice').innerText = 'Toplam Fiyat: ' + totalPrice +' TL'
     }
-
-
-
-
-
 }
-
-
-
-
-
 
 document.getElementById('button1').onclick = function () {
     Basket.addProduct(menu1);
